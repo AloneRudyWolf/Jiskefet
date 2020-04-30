@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Sortable - Display as grid</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #sortable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+  #sortable li {  float: left; background-color: silver;
+  min-height: 350px;
+  border: 3px solid black;
+  border-right: 10px solid black;
+  min-width: 200px;
+  flex:1; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+  </script>
+</head>
+<body>
+ 
+<ul id="sortable">
+  <li class="ui-state-default">1</li>
+  <li class="ui-state-default">2</li>
+  <li class="ui-state-default">3</li>
+
+</ul>
+ 
+ 
+</body>
+</html>

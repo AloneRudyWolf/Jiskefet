@@ -1,0 +1,13 @@
+{
+  "name": "jiskefet",
+  "version": "1.0.0",
+  "dependencies": {
+    "mysql": "^2.17.1",
+    "sqlstring": "^2.3.1"
+  },
+  "private": true,
+  "main": "api_server.js",
+  "scripts": {
+    "dev": "node api_server.js"
+  }
+}

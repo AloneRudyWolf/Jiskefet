@@ -1,0 +1,101 @@
+@media (min-width:500px ){
+.container22 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+.txt{
+    font-size: 22pt;
+}
+.first_box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    
+
+}
+.second_box {
+     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.info_data {
+    
+    width: 500px;
+    position: relative;
+    word-wrap: break-word;
+    flex:1;
+}
+.graph {
+    padding-top: 30px;
+    flex:3;
+    min-width:900px;
+    max-height:500px ;
+    max-width:900px ;
+    min-height:500px;
+    position: relative;
+    
+}
+.comments { 
+      flex:1;
+      width:500px ;
+      position: relative;
+       word-wrap: break-word;
+ }
+ .decription {
+
+    position: absolute;
+    top: 0px;
+    min-width: 95%;
+    background-color: #AFEEEE;
+    
+    text-align: center;
+    height: 20px;
+ }
+
+ .graph1 {
+  
+    
+    position: absolute;
+    min-width:900px ;
+    min-height:450px;
+    bottom: 0;
+ }
+ .info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+ }
+ .data {
+      display: flex;
+    flex-direction: column;
+    position: relative;
+ }
+.textdd {
+    margin-top: 20px;
+    width: 480px;
+    
+}
+.report {
+   flex:1;
+    width: 500px;
+    word-wrap: break-word;
+    position: relative;
+    
+}
+.graph2 {
+   padding-top: 20px;
+   position: relative;  
+    flex:2;
+ min-width:1400px;
+   
+    ;
+    min-height:500px;
+}
+#myChart1 {
+    margin-top: 20px;
+    max-height:550px; 
+}

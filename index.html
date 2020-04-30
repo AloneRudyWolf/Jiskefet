@@ -1,0 +1,143 @@
+
+<!doctype HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <title>Kiskefet</title>
+    <link rel="stylesheet" type="text/css" href="css/test.css">
+    <link rel="stylesheet" type="text/css" href="js/Chart.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+</head>
+
+<body onload="getAllUsers(); initGraphs(); startTime();">
+
+<div class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="TestLiza.html">Jiskefet</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <!--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Сharts
+                    </a---->
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="right_now.html">Second pages</a>
+                        <a class="dropdown-item" href="help.html">Help</a>
+                        <a class="dropdown-item" href="http://jiskefetpdf.std-847.ist.mospolytech.ru/">PDF report</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</div>
+
+
+<div class="Main">
+    <div class="FirstLine ">
+        <ul id="sortable1"  class="connectedSortable" style="display: flex">
+             <li class="ui-state-default">
+                <div class="DefaultBlock" >
+                    <div class="getrundata">
+                        <div class="decription" style="color:white;">Get run data</div>
+                        <div class="textdd" style="color:white;">
+                        <label>Type a number of run: <input type="text" name="id" id="getDataId" value="42"/></label>
+                        <input type="button" class="btn btn-danger" name="requestThis" id="getDataButton" value="Get data" onclick="getRunData();"/>
+                                    <br>
+                                    <br>
+                                    <div id="runDataDiv">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </li>
+                <li class="ui-state-default">
+                        <div class="DefaultBlock" >
+                            <div class="table-responsive wow slideInLeft">
+                                <table id="usersTableBody" class="table table-striped table-sm">
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="ui-state-default">
+                        <div class="DefaultBlock" >
+                            <div class="cleanslate w24tz-current-time w24tz-middle" style="display: inline-block !important; visibility: hidden !important; min-width:300px !important; min-height:145px !important;"><p><a href="//24timezones.com/Москва/время" style="text-decoration: none" class="clock24" id="tz24-1558743201-c1166-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMSIsInNob3dzZWNvbmRzIjoiMCIsImNvbnRhaW5lcl9pZCI6ImNsb2NrX2Jsb2NrX2NiNWNlODg4YTExMjQyYyIsInR5cGUiOiJkYiIsImxhbmciOiJydSJ9" title="Москва местное время" target="_blank" rel="nofollow">Москва</a></p><div id="clock_block_cb5ce888a11242c"></div></div>
+
+                            <div class="SectorLine" style="background-color: silver;">
+                                <canvas id="badGraph"></canvas>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+     </div>
+     
+            <div class="SecondLine ">
+
+                <ul id="sortable2" class="connectedSortable" style="display: flex">
+
+                    <li class="ui-state-default">
+                        <div class="DefaultBlockg">
+                            <canvas id="poLar"></canvas>
+                        </div>
+                    </li>
+
+                    <li class="ui-state-default">
+                        <div class="DefaultBlockg">
+                            <canvas id="20"></canvas>
+                        </div>
+                    </li>
+
+                    <li class="ui-state-default">
+                        <div class="DefaultBlockg">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+    
+</div>
+
+
+</body>
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <script src="js/popper.min.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="js/feather.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/Chart.bundle.js"></script>
+    <script src="js/Chart.bundle.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/test_graph.js"></script>
+    <script src="js/kek.js"></script>
+
+   
+ <script>
+  $( function() {
+    $( "#sortable1, #sortable2" ).sortable({
+      connectWith: ".connectedSortable"
+    }).disableSelection();
+  } );
+  </script>
+
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+</html>

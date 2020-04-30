@@ -1,0 +1,11 @@
+{
+  "mysql": {
+    "host" : "127.0.0.1",
+    "db" : "somebase",
+    "user" : "someuser",
+    "password" : "somepassword"
+  },
+  "http" : {
+    "port" : 8124
+  }
+}
